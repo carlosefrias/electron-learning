@@ -12,9 +12,14 @@ app.on('ready', _ =>{
             label: name,
             submenu: [{
                 label: `About ${name}`,
-                click: _ =>{
-                    console.log('clicked')
-                }
+                click: _ =>{ console.log('clicked') },
+                role: 'about'
+            }, {
+                type:'separator'
+            },{
+                label:'Quit',
+                click: _ =>{ app.quit() },
+                accelerator: 'Ctrl+Q'
             }]
         }
     ]
